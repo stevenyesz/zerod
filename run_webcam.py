@@ -23,7 +23,7 @@ from utils.write import write_obj_with_colors, write_obj_with_texture
 from utils.cv_plot import plot_kpt, plot_vertices, plot_pose_box
 
 import sys
-sys.path.append('/Users/stevenye/cv/face3d_old')
+#sys.path.append('/Users/stevenye/cv/face3d_old')
 import face3d
 from face3d import mesh
 from face3d import mesh_numpy
@@ -48,14 +48,16 @@ def main():
 
 
     # OpenCV
-    cap = cv2.VideoCapture(args.video_source)
+    #cap = cv2.VideoCapture(args.video_source)
+    cap = cv2.VideoCapture('b.mov')
     fps = video.FPS().start()
 
     # ---- init PRN
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu # GPU number, -1 for CPU
     prn = PRN(is_dlib = args.isDlib)
 
-    while True:
+    #while True:
+    while cap.isOpened():
         ret, frame = cap.read()
 
         # resize image and detect face
@@ -88,6 +90,10 @@ def main():
         
         image = image/255.
         if pos is None:
+            cv2.imshow('a',frame_resize)
+            fps.update()
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
             continue
 
         if args.is3d or args.isMat or args.isPose or args.isShow:
@@ -154,11 +160,12 @@ def main():
 
         #cv2.imshow('sparse alignment', np.concatenate([image, i_t], axis=1))
         cv2.imshow('sparse alignment', i_t)
-        #cv2.imshow('vedio', image)
+        cv2.imshow('vedio', image)
         #cv2.imshow('sparse alignment', np.concatenate([plot_kpt(image, kpt), i_t], axis=1))
         #cv2.imshow('dense alignment', plot_vertices(image, vertices))
         #cv2.imshow('pose', plot_pose_box(image, camera_matrix, kpt))
 
+        
         fps.update()
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

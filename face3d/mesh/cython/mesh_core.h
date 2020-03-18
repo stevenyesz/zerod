@@ -89,8 +89,6 @@ void _render_texture_core(
     int tex_h, int tex_w, int tex_c, 
     int mapping_type);
 
-void _write_obj_with_colors_texture(string filename, string mtl_name, 
-    float* vertices, int* triangles, float* colors, float* uv_coords,
-    int nver, int ntri, int ntexver);
+
 
 #endif

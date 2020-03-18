@@ -464,36 +464,36 @@ void _render_texture_core(
 // ------------------------------------------------- write
 // obj write
 // Ref: https://github.com/patrikhuber/eos/blob/master/include/eos/core/Mesh.hpp
-void _write_obj_with_colors_texture(string filename, string mtl_name, 
-    float* vertices, int* triangles, float* colors, float* uv_coords,
-    int nver, int ntri, int ntexver)
-{
-    int i;
-
-    ofstream obj_file(filename);
-
-    // first line of the obj file: the mtl name
-    obj_file << "mtllib " << mtl_name << endl;
-    
-    // write vertices 
-    for (i = 0; i < nver; ++i) 
-    {
-        obj_file << "v " << vertices[3*i] << " " << vertices[3*i + 1] << " " << vertices[3*i + 2] << colors[3*i] << " " << colors[3*i + 1] << " " << colors[3*i + 2] <<  endl;
-    }
-
-    // write uv coordinates
-    for (i = 0; i < ntexver; ++i) 
-    {
-        //obj_file << "vt " << uv_coords[2*i] << " " << (1 - uv_coords[2*i + 1]) << endl;
-        obj_file << "vt " << uv_coords[2*i] << " " << uv_coords[2*i + 1] << endl;
-    }
-
-    obj_file << "usemtl FaceTexture" << endl;
-    // write triangles
-    for (i = 0; i < ntri; ++i) 
-    {
-        // obj_file << "f " << triangles[3*i] << "/" << triangles[3*i] << " " << triangles[3*i + 1] << "/" << triangles[3*i + 1] << " " << triangles[3*i + 2] << "/" << triangles[3*i + 2] << endl;
-        obj_file << "f " << triangles[3*i + 2] << "/" << triangles[3*i + 2] << " " << triangles[3*i + 1] << "/" << triangles[3*i + 1] << " " << triangles[3*i] << "/" << triangles[3*i] << endl;
-    }
-
-}
+//void _write_obj_with_colors_texture(string filename, string mtl_name, 
+//    float* vertices, int* triangles, float* colors, float* uv_coords,
+//    int nver, int ntri, int ntexver)
+//{
+//    int i;
+//
+//    ofstream obj_file(filename);
+//
+//    // first line of the obj file: the mtl name
+//    obj_file << "mtllib " << mtl_name << endl;
+//    
+//    // write vertices 
+//    for (i = 0; i < nver; ++i) 
+//    {
+//        obj_file << "v " << vertices[3*i] << " " << vertices[3*i + 1] << " " << vertices[3*i + 2] << colors[3*i] << " " << colors[3*i + 1] << " " << colors[3*i + 2] <<  endl;
+//    }
+//
+//    // write uv coordinates
+//    for (i = 0; i < ntexver; ++i) 
+//    {
+//        //obj_file << "vt " << uv_coords[2*i] << " " << (1 - uv_coords[2*i + 1]) << endl;
+//        obj_file << "vt " << uv_coords[2*i] << " " << uv_coords[2*i + 1] << endl;
+//    }
+//
+//    obj_file << "usemtl FaceTexture" << endl;
+//    // write triangles
+//    for (i = 0; i < ntri; ++i) 
+//    {
+//        // obj_file << "f " << triangles[3*i] << "/" << triangles[3*i] << " " << triangles[3*i + 1] << "/" << triangles[3*i + 1] << " " << triangles[3*i + 2] << "/" << triangles[3*i + 2] << endl;
+//        obj_file << "f " << triangles[3*i + 2] << "/" << triangles[3*i + 2] << " " << triangles[3*i + 1] << "/" << triangles[3*i + 1] << " " << triangles[3*i] << "/" << triangles[3*i] << endl;
+//    }
+//
+//}

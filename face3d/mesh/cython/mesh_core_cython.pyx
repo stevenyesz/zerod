@@ -40,9 +40,9 @@ cdef extern from "mesh_core.h":
         float* normal, float* tri_normal, int* triangles,
         int ntri)
 
-    void _write_obj_with_colors_texture(string filename, string mtl_name, 
-        float* vertices, int* triangles, float* colors, float* uv_coords,
-        int nver, int ntri, int ntexver)
+    #void _write_obj_with_colors_texture(string filename, string mtl_name, 
+    #    float* vertices, int* triangles, float* colors, float* uv_coords,
+    #    int nver, int ntri, int ntexver)
 
 def get_normal_core(np.ndarray[float, ndim=2, mode = "c"] normal not None, 
                 np.ndarray[float, ndim=2, mode = "c"] tri_normal not None, 
@@ -124,13 +124,13 @@ def render_texture_core(np.ndarray[float, ndim=3, mode = "c"] image not None,
         tex_h, tex_w, tex_c, 
         mapping_type)
 
-def write_obj_with_colors_texture_core(string filename, string mtl_name, 
-                np.ndarray[float, ndim=2, mode = "c"] vertices not None, 
-                np.ndarray[int, ndim=2, mode="c"] triangles not None, 
-                np.ndarray[float, ndim=2, mode = "c"] colors not None, 
-                np.ndarray[float, ndim=2, mode = "c"] uv_coords not None, 
-                int nver, int ntri, int ntexver
-                ):
-    _write_obj_with_colors_texture(filename, mtl_name, 
-        <float*> np.PyArray_DATA(vertices), <int*> np.PyArray_DATA(triangles), <float*> np.PyArray_DATA(colors), <float*> np.PyArray_DATA(uv_coords),
-        nver, ntri, ntexver)
+#def write_obj_with_colors_texture_core(string filename, string mtl_name, 
+#                np.ndarray[float, ndim=2, mode = "c"] vertices not None, 
+#                np.ndarray[int, ndim=2, mode="c"] triangles not None, 
+#                np.ndarray[float, ndim=2, mode = "c"] colors not None, 
+#                np.ndarray[float, ndim=2, mode = "c"] uv_coords not None, 
+#                int nver, int ntri, int ntexver
+#                ):
+#    _write_obj_with_colors_texture(filename, mtl_name, 
+#        <float*> np.PyArray_DATA(vertices), <int*> np.PyArray_DATA(triangles), <float*> np.PyArray_DATA(colors), <float*> np.PyArray_DATA(uv_coords),
+#        nver, ntri, ntexver)

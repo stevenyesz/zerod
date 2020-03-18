@@ -771,7 +771,6 @@ static const char *__pyx_filename;
 static const char *__pyx_f[] = {
   "mesh_core_cython.pyx",
   "__init__.pxd",
-  "stringsource",
   "type.pxd",
 };
 /* BufferFormatStructs.proto */
@@ -1522,7 +1521,6 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void); /*proto*/
 /* Module declarations from 'libcpp.string' */
 
 /* Module declarations from 'mesh_core_cython' */
-static std::string __pyx_convert_string_from_py_std__in_string(PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
 #define __Pyx_MODULE_NAME "mesh_core_cython"
@@ -1554,16 +1552,12 @@ static const char __pyx_k_colors[] = "colors";
 static const char __pyx_k_coords[] = "coords";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_normal[] = "normal";
-static const char __pyx_k_ntexver[] = "ntexver";
 static const char __pyx_k_texture[] = "texture";
 static const char __pyx_k_zbuffer[] = "zbuffer";
-static const char __pyx_k_filename[] = "filename";
-static const char __pyx_k_mtl_name[] = "mtl_name";
 static const char __pyx_k_tex_nver[] = "tex_nver";
 static const char __pyx_k_vertices[] = "vertices";
 static const char __pyx_k_intensity[] = "intensity";
 static const char __pyx_k_triangles[] = "triangles";
-static const char __pyx_k_uv_coords[] = "uv_coords";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_tex_coords[] = "tex_coords";
 static const char __pyx_k_tri_normal[] = "tri_normal";
@@ -1589,7 +1583,6 @@ static const char __pyx_k_Format_string_allocated_too_shor[] = "Format string al
 static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte order not supported";
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
-static const char __pyx_k_write_obj_with_colors_texture_co[] = "write_obj_with_colors_texture_core";
 static const char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor;
 static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
@@ -1603,7 +1596,6 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_colors;
 static PyObject *__pyx_n_s_coords;
 static PyObject *__pyx_n_s_depth_buffer;
-static PyObject *__pyx_n_s_filename;
 static PyObject *__pyx_n_s_get_normal_core;
 static PyObject *__pyx_n_s_h;
 static PyObject *__pyx_n_s_image;
@@ -1613,12 +1605,10 @@ static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mapping_type;
 static PyObject *__pyx_n_s_mesh_core_cython;
 static PyObject *__pyx_kp_s_mesh_core_cython_pyx;
-static PyObject *__pyx_n_s_mtl_name;
 static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
 static PyObject *__pyx_kp_u_ndarray_is_not_Fortran_contiguou;
 static PyObject *__pyx_n_s_normal;
 static PyObject *__pyx_n_s_np;
-static PyObject *__pyx_n_s_ntexver;
 static PyObject *__pyx_n_s_ntri;
 static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_kp_s_numpy_core_multiarray_failed_to;
@@ -1642,18 +1632,15 @@ static PyObject *__pyx_n_s_tri_normal;
 static PyObject *__pyx_n_s_triangle_buffer;
 static PyObject *__pyx_n_s_triangles;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
-static PyObject *__pyx_n_s_uv_coords;
 static PyObject *__pyx_n_s_vertices;
 static PyObject *__pyx_n_s_vs;
 static PyObject *__pyx_n_s_w;
-static PyObject *__pyx_n_s_write_obj_with_colors_texture_co;
 static PyObject *__pyx_n_s_zbuffer;
 static PyObject *__pyx_pf_16mesh_core_cython_get_normal_core(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_normal, PyArrayObject *__pyx_v_tri_normal, PyArrayObject *__pyx_v_triangles, int __pyx_v_ntri); /* proto */
 static PyObject *__pyx_pf_16mesh_core_cython_2rasterize_triangles_core(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_depth_buffer, PyArrayObject *__pyx_v_triangle_buffer, PyArrayObject *__pyx_v_barycentric_weight, int __pyx_v_nver, int __pyx_v_ntri, int __pyx_v_h, int __pyx_v_w); /* proto */
 static PyObject *__pyx_pf_16mesh_core_cython_4render_colors_core(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_image, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_colors, PyArrayObject *__pyx_v_depth_buffer, int __pyx_v_nver, int __pyx_v_ntri, int __pyx_v_h, int __pyx_v_w, int __pyx_v_c); /* proto */
 static PyObject *__pyx_pf_16mesh_core_cython_6render_grid_core(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_image, PyArrayObject *__pyx_v_t, PyArrayObject *__pyx_v_vs, PyArrayObject *__pyx_v_intensity, PyArrayObject *__pyx_v_zbuffer, PyArrayObject *__pyx_v_coords, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_depth_buffer, int __pyx_v_nver, int __pyx_v_ntri, int __pyx_v_h, int __pyx_v_w, int __pyx_v_c); /* proto */
 static PyObject *__pyx_pf_16mesh_core_cython_8render_texture_core(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_image, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_texture, PyArrayObject *__pyx_v_tex_coords, PyArrayObject *__pyx_v_tex_triangles, PyArrayObject *__pyx_v_depth_buffer, int __pyx_v_nver, int __pyx_v_tex_nver, int __pyx_v_ntri, int __pyx_v_h, int __pyx_v_w, int __pyx_v_c, int __pyx_v_tex_h, int __pyx_v_tex_w, int __pyx_v_tex_c, int __pyx_v_mapping_type); /* proto */
-static PyObject *__pyx_pf_16mesh_core_cython_10write_obj_with_colors_texture_core(CYTHON_UNUSED PyObject *__pyx_self, std::string __pyx_v_filename, std::string __pyx_v_mtl_name, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_colors, PyArrayObject *__pyx_v_uv_coords, int __pyx_v_nver, int __pyx_v_ntri, int __pyx_v_ntexver); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_tuple_;
@@ -1670,16 +1657,14 @@ static PyObject *__pyx_tuple__12;
 static PyObject *__pyx_tuple__14;
 static PyObject *__pyx_tuple__16;
 static PyObject *__pyx_tuple__18;
-static PyObject *__pyx_tuple__20;
 static PyObject *__pyx_codeobj__11;
 static PyObject *__pyx_codeobj__13;
 static PyObject *__pyx_codeobj__15;
 static PyObject *__pyx_codeobj__17;
 static PyObject *__pyx_codeobj__19;
-static PyObject *__pyx_codeobj__21;
 
 /* "mesh_core_cython.pyx":47
- *         int nver, int ntri, int ntexver)
+ *     #    int nver, int ntri, int ntexver)
  * 
  * def get_normal_core(np.ndarray[float, ndim=2, mode = "c"] normal not None,             # <<<<<<<<<<<<<<
  *                 np.ndarray[float, ndim=2, mode = "c"] tri_normal not None,
@@ -1825,7 +1810,7 @@ static PyObject *__pyx_pf_16mesh_core_cython_get_normal_core(CYTHON_UNUSED PyObj
   _get_normal_core(((float *)PyArray_DATA(((PyArrayObject *)__pyx_v_normal))), ((float *)PyArray_DATA(((PyArrayObject *)__pyx_v_tri_normal))), ((int *)PyArray_DATA(((PyArrayObject *)__pyx_v_triangles))), __pyx_v_ntri);
 
   /* "mesh_core_cython.pyx":47
- *         int nver, int ntri, int ntexver)
+ *     #    int nver, int ntri, int ntexver)
  * 
  * def get_normal_core(np.ndarray[float, ndim=2, mode = "c"] normal not None,             # <<<<<<<<<<<<<<
  *                 np.ndarray[float, ndim=2, mode = "c"] tri_normal not None,
@@ -3136,254 +3121,6 @@ static PyObject *__pyx_pf_16mesh_core_cython_8render_texture_core(CYTHON_UNUSED 
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_tex_triangles.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_texture.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_triangles.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vertices.rcbuffer->pybuffer);
-  __pyx_L2:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "mesh_core_cython.pyx":127
- *         mapping_type)
- * 
- * def write_obj_with_colors_texture_core(string filename, string mtl_name,             # <<<<<<<<<<<<<<
- *                 np.ndarray[float, ndim=2, mode = "c"] vertices not None,
- *                 np.ndarray[int, ndim=2, mode="c"] triangles not None,
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_16mesh_core_cython_11write_obj_with_colors_texture_core(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_16mesh_core_cython_11write_obj_with_colors_texture_core = {"write_obj_with_colors_texture_core", (PyCFunction)__pyx_pw_16mesh_core_cython_11write_obj_with_colors_texture_core, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_16mesh_core_cython_11write_obj_with_colors_texture_core(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  std::string __pyx_v_filename;
-  std::string __pyx_v_mtl_name;
-  PyArrayObject *__pyx_v_vertices = 0;
-  PyArrayObject *__pyx_v_triangles = 0;
-  PyArrayObject *__pyx_v_colors = 0;
-  PyArrayObject *__pyx_v_uv_coords = 0;
-  int __pyx_v_nver;
-  int __pyx_v_ntri;
-  int __pyx_v_ntexver;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("write_obj_with_colors_texture_core (wrapper)", 0);
-  {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_filename,&__pyx_n_s_mtl_name,&__pyx_n_s_vertices,&__pyx_n_s_triangles,&__pyx_n_s_colors,&__pyx_n_s_uv_coords,&__pyx_n_s_nver,&__pyx_n_s_ntri,&__pyx_n_s_ntexver,0};
-    PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
-    if (unlikely(__pyx_kwds)) {
-      Py_ssize_t kw_args;
-      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
-      switch (pos_args) {
-        case  9: values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
-        CYTHON_FALLTHROUGH;
-        case  8: values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
-        CYTHON_FALLTHROUGH;
-        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
-        CYTHON_FALLTHROUGH;
-        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
-        CYTHON_FALLTHROUGH;
-        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
-        CYTHON_FALLTHROUGH;
-        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
-        CYTHON_FALLTHROUGH;
-        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
-        CYTHON_FALLTHROUGH;
-        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-        CYTHON_FALLTHROUGH;
-        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        CYTHON_FALLTHROUGH;
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = PyDict_Size(__pyx_kwds);
-      switch (pos_args) {
-        case  0:
-        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_filename)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
-        CYTHON_FALLTHROUGH;
-        case  1:
-        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_mtl_name)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 1); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  2:
-        if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_vertices)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 2); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  3:
-        if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_triangles)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 3); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  4:
-        if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_colors)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 4); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  5:
-        if (likely((values[5] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_uv_coords)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 5); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  6:
-        if (likely((values[6] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_nver)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 6); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  7:
-        if (likely((values[7] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_ntri)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 7); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-        CYTHON_FALLTHROUGH;
-        case  8:
-        if (likely((values[8] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_ntexver)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, 8); __PYX_ERR(0, 127, __pyx_L3_error)
-        }
-      }
-      if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "write_obj_with_colors_texture_core") < 0)) __PYX_ERR(0, 127, __pyx_L3_error)
-      }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 9) {
-      goto __pyx_L5_argtuple_error;
-    } else {
-      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-      values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
-      values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
-      values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
-      values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
-      values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
-      values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
-      values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
-    }
-    __pyx_v_filename = __pyx_convert_string_from_py_std__in_string(values[0]); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
-    __pyx_v_mtl_name = __pyx_convert_string_from_py_std__in_string(values[1]); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L3_error)
-    __pyx_v_vertices = ((PyArrayObject *)values[2]);
-    __pyx_v_triangles = ((PyArrayObject *)values[3]);
-    __pyx_v_colors = ((PyArrayObject *)values[4]);
-    __pyx_v_uv_coords = ((PyArrayObject *)values[5]);
-    __pyx_v_nver = __Pyx_PyInt_As_int(values[6]); if (unlikely((__pyx_v_nver == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L3_error)
-    __pyx_v_ntri = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_ntri == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L3_error)
-    __pyx_v_ntexver = __Pyx_PyInt_As_int(values[8]); if (unlikely((__pyx_v_ntexver == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L3_error)
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("write_obj_with_colors_texture_core", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 127, __pyx_L3_error)
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("mesh_core_cython.write_obj_with_colors_texture_core", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vertices), __pyx_ptype_5numpy_ndarray, 0, "vertices", 0))) __PYX_ERR(0, 128, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_triangles), __pyx_ptype_5numpy_ndarray, 0, "triangles", 0))) __PYX_ERR(0, 129, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_colors), __pyx_ptype_5numpy_ndarray, 0, "colors", 0))) __PYX_ERR(0, 130, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_uv_coords), __pyx_ptype_5numpy_ndarray, 0, "uv_coords", 0))) __PYX_ERR(0, 131, __pyx_L1_error)
-  __pyx_r = __pyx_pf_16mesh_core_cython_10write_obj_with_colors_texture_core(__pyx_self, __pyx_v_filename, __pyx_v_mtl_name, __pyx_v_vertices, __pyx_v_triangles, __pyx_v_colors, __pyx_v_uv_coords, __pyx_v_nver, __pyx_v_ntri, __pyx_v_ntexver);
-
-  /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_16mesh_core_cython_10write_obj_with_colors_texture_core(CYTHON_UNUSED PyObject *__pyx_self, std::string __pyx_v_filename, std::string __pyx_v_mtl_name, PyArrayObject *__pyx_v_vertices, PyArrayObject *__pyx_v_triangles, PyArrayObject *__pyx_v_colors, PyArrayObject *__pyx_v_uv_coords, int __pyx_v_nver, int __pyx_v_ntri, int __pyx_v_ntexver) {
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_colors;
-  __Pyx_Buffer __pyx_pybuffer_colors;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_triangles;
-  __Pyx_Buffer __pyx_pybuffer_triangles;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_uv_coords;
-  __Pyx_Buffer __pyx_pybuffer_uv_coords;
-  __Pyx_LocalBuf_ND __pyx_pybuffernd_vertices;
-  __Pyx_Buffer __pyx_pybuffer_vertices;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("write_obj_with_colors_texture_core", 0);
-  __pyx_pybuffer_vertices.pybuffer.buf = NULL;
-  __pyx_pybuffer_vertices.refcount = 0;
-  __pyx_pybuffernd_vertices.data = NULL;
-  __pyx_pybuffernd_vertices.rcbuffer = &__pyx_pybuffer_vertices;
-  __pyx_pybuffer_triangles.pybuffer.buf = NULL;
-  __pyx_pybuffer_triangles.refcount = 0;
-  __pyx_pybuffernd_triangles.data = NULL;
-  __pyx_pybuffernd_triangles.rcbuffer = &__pyx_pybuffer_triangles;
-  __pyx_pybuffer_colors.pybuffer.buf = NULL;
-  __pyx_pybuffer_colors.refcount = 0;
-  __pyx_pybuffernd_colors.data = NULL;
-  __pyx_pybuffernd_colors.rcbuffer = &__pyx_pybuffer_colors;
-  __pyx_pybuffer_uv_coords.pybuffer.buf = NULL;
-  __pyx_pybuffer_uv_coords.refcount = 0;
-  __pyx_pybuffernd_uv_coords.data = NULL;
-  __pyx_pybuffernd_uv_coords.rcbuffer = &__pyx_pybuffer_uv_coords;
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vertices.rcbuffer->pybuffer, (PyObject*)__pyx_v_vertices, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 127, __pyx_L1_error)
-  }
-  __pyx_pybuffernd_vertices.diminfo[0].strides = __pyx_pybuffernd_vertices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vertices.diminfo[0].shape = __pyx_pybuffernd_vertices.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vertices.diminfo[1].strides = __pyx_pybuffernd_vertices.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vertices.diminfo[1].shape = __pyx_pybuffernd_vertices.rcbuffer->pybuffer.shape[1];
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_triangles.rcbuffer->pybuffer, (PyObject*)__pyx_v_triangles, &__Pyx_TypeInfo_int, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 127, __pyx_L1_error)
-  }
-  __pyx_pybuffernd_triangles.diminfo[0].strides = __pyx_pybuffernd_triangles.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_triangles.diminfo[0].shape = __pyx_pybuffernd_triangles.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_triangles.diminfo[1].strides = __pyx_pybuffernd_triangles.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_triangles.diminfo[1].shape = __pyx_pybuffernd_triangles.rcbuffer->pybuffer.shape[1];
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_colors.rcbuffer->pybuffer, (PyObject*)__pyx_v_colors, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 127, __pyx_L1_error)
-  }
-  __pyx_pybuffernd_colors.diminfo[0].strides = __pyx_pybuffernd_colors.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_colors.diminfo[0].shape = __pyx_pybuffernd_colors.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_colors.diminfo[1].strides = __pyx_pybuffernd_colors.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_colors.diminfo[1].shape = __pyx_pybuffernd_colors.rcbuffer->pybuffer.shape[1];
-  {
-    __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_uv_coords.rcbuffer->pybuffer, (PyObject*)__pyx_v_uv_coords, &__Pyx_TypeInfo_float, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 127, __pyx_L1_error)
-  }
-  __pyx_pybuffernd_uv_coords.diminfo[0].strides = __pyx_pybuffernd_uv_coords.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_uv_coords.diminfo[0].shape = __pyx_pybuffernd_uv_coords.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_uv_coords.diminfo[1].strides = __pyx_pybuffernd_uv_coords.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_uv_coords.diminfo[1].shape = __pyx_pybuffernd_uv_coords.rcbuffer->pybuffer.shape[1];
-
-  /* "mesh_core_cython.pyx":134
- *                 int nver, int ntri, int ntexver
- *                 ):
- *     _write_obj_with_colors_texture(filename, mtl_name,             # <<<<<<<<<<<<<<
- *         <float*> np.PyArray_DATA(vertices), <int*> np.PyArray_DATA(triangles), <float*> np.PyArray_DATA(colors), <float*> np.PyArray_DATA(uv_coords),
- *         nver, ntri, ntexver)
- */
-  _write_obj_with_colors_texture(__pyx_v_filename, __pyx_v_mtl_name, ((float *)PyArray_DATA(((PyArrayObject *)__pyx_v_vertices))), ((int *)PyArray_DATA(((PyArrayObject *)__pyx_v_triangles))), ((float *)PyArray_DATA(((PyArrayObject *)__pyx_v_colors))), ((float *)PyArray_DATA(((PyArrayObject *)__pyx_v_uv_coords))), __pyx_v_nver, __pyx_v_ntri, __pyx_v_ntexver);
-
-  /* "mesh_core_cython.pyx":127
- *         mapping_type)
- * 
- * def write_obj_with_colors_texture_core(string filename, string mtl_name,             # <<<<<<<<<<<<<<
- *                 np.ndarray[float, ndim=2, mode = "c"] vertices not None,
- *                 np.ndarray[int, ndim=2, mode="c"] triangles not None,
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
-    __Pyx_PyThreadState_declare
-    __Pyx_PyThreadState_assign
-    __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_colors.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_triangles.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_uv_coords.rcbuffer->pybuffer);
-    __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vertices.rcbuffer->pybuffer);
-  __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("mesh_core_cython.write_obj_with_colors_texture_core", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  goto __pyx_L2;
-  __pyx_L0:;
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_colors.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_triangles.rcbuffer->pybuffer);
-  __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_uv_coords.rcbuffer->pybuffer);
   __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vertices.rcbuffer->pybuffer);
   __pyx_L2:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5973,59 +5710,6 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "string.from_py":13
- * 
- * @cname("__pyx_convert_string_from_py_std__in_string")
- * cdef string __pyx_convert_string_from_py_std__in_string(object o) except *:             # <<<<<<<<<<<<<<
- *     cdef Py_ssize_t length
- *     cdef const char* data = __Pyx_PyObject_AsStringAndSize(o, &length)
- */
-
-static std::string __pyx_convert_string_from_py_std__in_string(PyObject *__pyx_v_o) {
-  Py_ssize_t __pyx_v_length;
-  char const *__pyx_v_data;
-  std::string __pyx_r;
-  __Pyx_RefNannyDeclarations
-  char const *__pyx_t_1;
-  __Pyx_RefNannySetupContext("__pyx_convert_string_from_py_std__in_string", 0);
-
-  /* "string.from_py":15
- * cdef string __pyx_convert_string_from_py_std__in_string(object o) except *:
- *     cdef Py_ssize_t length
- *     cdef const char* data = __Pyx_PyObject_AsStringAndSize(o, &length)             # <<<<<<<<<<<<<<
- *     return string(data, length)
- * 
- */
-  __pyx_t_1 = __Pyx_PyObject_AsStringAndSize(__pyx_v_o, (&__pyx_v_length)); if (unlikely(__pyx_t_1 == ((char const *)NULL))) __PYX_ERR(2, 15, __pyx_L1_error)
-  __pyx_v_data = __pyx_t_1;
-
-  /* "string.from_py":16
- *     cdef Py_ssize_t length
- *     cdef const char* data = __Pyx_PyObject_AsStringAndSize(o, &length)
- *     return string(data, length)             # <<<<<<<<<<<<<<
- * 
- * 
- */
-  __pyx_r = std::string(__pyx_v_data, __pyx_v_length);
-  goto __pyx_L0;
-
-  /* "string.from_py":13
- * 
- * @cname("__pyx_convert_string_from_py_std__in_string")
- * cdef string __pyx_convert_string_from_py_std__in_string(object o) except *:             # <<<<<<<<<<<<<<
- *     cdef Py_ssize_t length
- *     cdef const char* data = __Pyx_PyObject_AsStringAndSize(o, &length)
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("string.from_py.__pyx_convert_string_from_py_std__in_string", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_pretend_to_initialize(&__pyx_r);
-  __pyx_L0:;
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
 static PyMethodDef __pyx_methods[] = {
   {0, 0, 0, 0}
 };
@@ -6075,7 +5759,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_colors, __pyx_k_colors, sizeof(__pyx_k_colors), 0, 0, 1, 1},
   {&__pyx_n_s_coords, __pyx_k_coords, sizeof(__pyx_k_coords), 0, 0, 1, 1},
   {&__pyx_n_s_depth_buffer, __pyx_k_depth_buffer, sizeof(__pyx_k_depth_buffer), 0, 0, 1, 1},
-  {&__pyx_n_s_filename, __pyx_k_filename, sizeof(__pyx_k_filename), 0, 0, 1, 1},
   {&__pyx_n_s_get_normal_core, __pyx_k_get_normal_core, sizeof(__pyx_k_get_normal_core), 0, 0, 1, 1},
   {&__pyx_n_s_h, __pyx_k_h, sizeof(__pyx_k_h), 0, 0, 1, 1},
   {&__pyx_n_s_image, __pyx_k_image, sizeof(__pyx_k_image), 0, 0, 1, 1},
@@ -6085,12 +5768,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_mapping_type, __pyx_k_mapping_type, sizeof(__pyx_k_mapping_type), 0, 0, 1, 1},
   {&__pyx_n_s_mesh_core_cython, __pyx_k_mesh_core_cython, sizeof(__pyx_k_mesh_core_cython), 0, 0, 1, 1},
   {&__pyx_kp_s_mesh_core_cython_pyx, __pyx_k_mesh_core_cython_pyx, sizeof(__pyx_k_mesh_core_cython_pyx), 0, 0, 1, 0},
-  {&__pyx_n_s_mtl_name, __pyx_k_mtl_name, sizeof(__pyx_k_mtl_name), 0, 0, 1, 1},
   {&__pyx_kp_u_ndarray_is_not_C_contiguous, __pyx_k_ndarray_is_not_C_contiguous, sizeof(__pyx_k_ndarray_is_not_C_contiguous), 0, 1, 0, 0},
   {&__pyx_kp_u_ndarray_is_not_Fortran_contiguou, __pyx_k_ndarray_is_not_Fortran_contiguou, sizeof(__pyx_k_ndarray_is_not_Fortran_contiguou), 0, 1, 0, 0},
   {&__pyx_n_s_normal, __pyx_k_normal, sizeof(__pyx_k_normal), 0, 0, 1, 1},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
-  {&__pyx_n_s_ntexver, __pyx_k_ntexver, sizeof(__pyx_k_ntexver), 0, 0, 1, 1},
   {&__pyx_n_s_ntri, __pyx_k_ntri, sizeof(__pyx_k_ntri), 0, 0, 1, 1},
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_kp_s_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 0, 1, 0},
@@ -6114,11 +5795,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_triangle_buffer, __pyx_k_triangle_buffer, sizeof(__pyx_k_triangle_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_triangles, __pyx_k_triangles, sizeof(__pyx_k_triangles), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
-  {&__pyx_n_s_uv_coords, __pyx_k_uv_coords, sizeof(__pyx_k_uv_coords), 0, 0, 1, 1},
   {&__pyx_n_s_vertices, __pyx_k_vertices, sizeof(__pyx_k_vertices), 0, 0, 1, 1},
   {&__pyx_n_s_vs, __pyx_k_vs, sizeof(__pyx_k_vs), 0, 0, 1, 1},
   {&__pyx_n_s_w, __pyx_k_w, sizeof(__pyx_k_w), 0, 0, 1, 1},
-  {&__pyx_n_s_write_obj_with_colors_texture_co, __pyx_k_write_obj_with_colors_texture_co, sizeof(__pyx_k_write_obj_with_colors_texture_co), 0, 0, 1, 1},
   {&__pyx_n_s_zbuffer, __pyx_k_zbuffer, sizeof(__pyx_k_zbuffer), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
@@ -6234,7 +5913,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__9);
 
   /* "mesh_core_cython.pyx":47
- *         int nver, int ntri, int ntexver)
+ *     #    int nver, int ntri, int ntexver)
  * 
  * def get_normal_core(np.ndarray[float, ndim=2, mode = "c"] normal not None,             # <<<<<<<<<<<<<<
  *                 np.ndarray[float, ndim=2, mode = "c"] tri_normal not None,
@@ -6292,18 +5971,6 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(17, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mesh_core_cython_pyx, __pyx_n_s_render_texture_core, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 106, __pyx_L1_error)
-
-  /* "mesh_core_cython.pyx":127
- *         mapping_type)
- * 
- * def write_obj_with_colors_texture_core(string filename, string mtl_name,             # <<<<<<<<<<<<<<
- *                 np.ndarray[float, ndim=2, mode = "c"] vertices not None,
- *                 np.ndarray[int, ndim=2, mode="c"] triangles not None,
- */
-  __pyx_tuple__20 = PyTuple_Pack(9, __pyx_n_s_filename, __pyx_n_s_mtl_name, __pyx_n_s_vertices, __pyx_n_s_triangles, __pyx_n_s_colors, __pyx_n_s_uv_coords, __pyx_n_s_nver, __pyx_n_s_ntri, __pyx_n_s_ntexver); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 127, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__20);
-  __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(9, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mesh_core_cython_pyx, __pyx_n_s_write_obj_with_colors_texture_co, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -6463,7 +6130,7 @@ static int __pyx_pymod_exec_mesh_core_cython(PyObject *__pyx_pyinit_module)
   #else
   sizeof(PyHeapTypeObject),
   #endif
-  0); if (unlikely(!__pyx_ptype_7cpython_4type_type)) __PYX_ERR(3, 9, __pyx_L1_error)
+  0); if (unlikely(!__pyx_ptype_7cpython_4type_type)) __PYX_ERR(2, 9, __pyx_L1_error)
   __pyx_ptype_5numpy_dtype = __Pyx_ImportType("numpy", "dtype", sizeof(PyArray_Descr), 0); if (unlikely(!__pyx_ptype_5numpy_dtype)) __PYX_ERR(1, 163, __pyx_L1_error)
   __pyx_ptype_5numpy_flatiter = __Pyx_ImportType("numpy", "flatiter", sizeof(PyArrayIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_flatiter)) __PYX_ERR(1, 185, __pyx_L1_error)
   __pyx_ptype_5numpy_broadcast = __Pyx_ImportType("numpy", "broadcast", sizeof(PyArrayMultiIterObject), 0); if (unlikely(!__pyx_ptype_5numpy_broadcast)) __PYX_ERR(1, 189, __pyx_L1_error)
@@ -6496,7 +6163,7 @@ static int __pyx_pymod_exec_mesh_core_cython(PyObject *__pyx_pyinit_module)
   __pyx_t_2 = __pyx_f_5numpy_import_array(); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 6, __pyx_L1_error)
 
   /* "mesh_core_cython.pyx":47
- *         int nver, int ntri, int ntexver)
+ *     #    int nver, int ntri, int ntexver)
  * 
  * def get_normal_core(np.ndarray[float, ndim=2, mode = "c"] normal not None,             # <<<<<<<<<<<<<<
  *                 np.ndarray[float, ndim=2, mode = "c"] tri_normal not None,
@@ -6555,18 +6222,6 @@ static int __pyx_pymod_exec_mesh_core_cython(PyObject *__pyx_pyinit_module)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_render_texture_core, __pyx_t_1) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mesh_core_cython.pyx":127
- *         mapping_type)
- * 
- * def write_obj_with_colors_texture_core(string filename, string mtl_name,             # <<<<<<<<<<<<<<
- *                 np.ndarray[float, ndim=2, mode = "c"] vertices not None,
- *                 np.ndarray[int, ndim=2, mode="c"] triangles not None,
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_16mesh_core_cython_11write_obj_with_colors_texture_core, NULL, __pyx_n_s_mesh_core_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_write_obj_with_colors_texture_co, __pyx_t_1) < 0) __PYX_ERR(0, 127, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
   /* "mesh_core_cython.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
@@ -6577,12 +6232,12 @@ static int __pyx_pymod_exec_mesh_core_cython(PyObject *__pyx_pyinit_module)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "string.from_py":13
+  /* "../../../../../../../usr/local/lib/python3.5/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+ *         raise ImportError("numpy.core.umath failed to import")
  * 
- * @cname("__pyx_convert_string_from_py_std__in_string")
- * cdef string __pyx_convert_string_from_py_std__in_string(object o) except *:             # <<<<<<<<<<<<<<
- *     cdef Py_ssize_t length
- *     cdef const char* data = __Pyx_PyObject_AsStringAndSize(o, &length)
+ * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
+ *     try:
+ *         _import_umath()
  */
 
   /*--- Wrapped vars code ---*/
